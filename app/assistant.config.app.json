@@ -1,0 +1,8 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "app",
+  "entryFile": "assistant.app",
+  "compilerOptions": {
+    "watchAssets": true
+  }
+}
