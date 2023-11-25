@@ -22,7 +22,7 @@ export class GetThreadMessagesService {
         const fileId = message.value;
         console.log(`⏳ Downloading file: ${fileId}...`);
 
-        const filepath = await this.fileClient.getAndStore(fileId);
+        const filepath = await this.fileClient.get(fileId);
         if (filepath) {
           result.push(`📊 File stored: ${filepath}`);
         }

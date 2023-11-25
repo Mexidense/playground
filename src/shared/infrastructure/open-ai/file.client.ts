@@ -1,3 +1,3 @@
 export interface FileClient {
-  getAndStore(fileId: string): Promise<string>;
+  get(fileId: string): Promise<string>;
 }

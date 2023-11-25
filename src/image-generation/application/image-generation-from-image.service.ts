@@ -1,12 +1,17 @@
 import { ImageClient } from '@playground/shared/infrastructure/open-ai/image.client';
 
-export class ImageGenerationService {
+export class ImageGenerationFromImageService {
   constructor(private readonly imageGenerationClient: ImageClient) {}
 
-  async generate(prompt: string, numberOfImages: number): Promise<void> {
+  async editImage(
+    prompt: string,
+    imagePath: string,
+    numberOfImages: number,
+  ): Promise<void> {
     try {
-      const images = await this.imageGenerationClient.generateImages(
+      const images = await this.imageGenerationClient.editImage(
         prompt,
+        imagePath,
         numberOfImages,
       );
 

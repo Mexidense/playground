@@ -1,9 +1,10 @@
 import { Module, OnApplicationBootstrap } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import OpenAI from 'openai';
-import { ImageGenerationService } from '@playground/image-generation/application/image-generation.service';
+import { ImageGenerationFromScratchService } from '@playground/image-generation/application/image-generation-from-scratch.service';
 import { ImageClient } from '@playground/shared/infrastructure/open-ai/image.client';
 import { ImageHttpClient } from '@playground/shared/infrastructure/open-ai/image.http-client';
+import { ImageGenerationFromImageService } from '@playground/image-generation/application/image-generation-from-image.service';
 
 @Module({
   imports: [ConfigModule.forRoot()],
@@ -23,23 +24,36 @@ import { ImageHttpClient } from '@playground/shared/infrastructure/open-ai/image
       inject: [OpenAI],
     },
     {
-      provide: ImageGenerationService,
+      provide: ImageGenerationFromScratchService,
       useFactory: (imageGenerationClient: ImageClient) =>
-        new ImageGenerationService(imageGenerationClient),
+        new ImageGenerationFromScratchService(imageGenerationClient),
+      inject: [ImageHttpClient],
+    },
+    {
+      provide: ImageGenerationFromImageService,
+      useFactory: (imageGenerationClient: ImageClient) =>
+        new ImageGenerationFromImageService(imageGenerationClient),
       inject: [ImageHttpClient],
     },
   ],
 })
 export class ImageGenerationModule implements OnApplicationBootstrap {
   constructor(
-    private readonly imageGenerationService: ImageGenerationService,
+    private readonly imageGenerationFromScratchService: ImageGenerationFromScratchService,
+    private readonly imageGenerationFromImageService: ImageGenerationFromImageService,
   ) {}
 
   async onApplicationBootstrap(): Promise<void> {
     console.log(`🧠 Generating image...`);
 
-    await this.imageGenerationService.generate(
+    await this.imageGenerationFromScratchService.generate(
       'Create a cute image about a male mexican engineering developing an assistant GPT bot',
+      1,
+    );
+
+    await this.imageGenerationFromImageService.editImage(
+      'A major town on fire',
+      'files/olga_holidays.png',
       1,
     );
 
