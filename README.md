@@ -2,22 +2,33 @@
 
 ## Assistant with Open AI
 
-- For dev environment run
+- Dev environment run
     ```bash
     npm run start:assistant:dev
     ```
-- For prod environment run
+- Prod environment run
     ```bash
     npm run start:assistant
     ```
 
 ## Image generation with Open AI
 
-- For dev environment run
+- Dev environment run
     ```bash
     npm run start:image-generation:dev
     ```
-- For prod environment run
+- Prod environment run
     ```bash
     npm run start:image-generation
+    ```
+
+## Generate code from UML sequence diagrams with Open AI
+
+- Dev environment run
+    ```bash
+    npm run start:sequence-diagram:dev
+    ```
+- Prod environment run
+    ```bash
+    npm run start:sequence-diagram
     ```

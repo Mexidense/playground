@@ -1,7 +1,7 @@
 import { Module, OnApplicationBootstrap } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import OpenAI from 'openai';
-import { SequenceDiagramService } from '../../sequence-diagram/sequence-diagram.service';
+import { SequenceDiagramService } from '@playground/sequence-diagram/sequence-diagram.service';
 import { VisionClient } from '@playground/shared/open-ai/vision.client';
 import { VisionHttpClient } from '@playground/shared/open-ai/vision.http-client';
 

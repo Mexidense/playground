@@ -20,6 +20,7 @@
     "paths": {
       "@playground/assistant/*": ["src/assistant/*"],
       "@playground/image-generation/*": ["src/image-generation/*"],
+      "@playground/sequence-diagram/*": ["src/sequence-diagram/*"],
       "@playground/shared/*": ["src/shared/*"],
     }
   }
