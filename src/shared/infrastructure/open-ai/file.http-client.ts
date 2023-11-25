@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { FileClient } from '@playground/assistant/infrastructure/open-ai/file.client';
+import { FileClient } from '@playground/shared/infrastructure/open-ai/file.client';
 import * as fs from 'fs';
 
 export class FileHttpClient implements FileClient {

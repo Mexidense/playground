@@ -9,6 +9,8 @@
     "build": "nest build",
     "start:assistant": "node dist/app/assistant.app",
     "start:assistant:dev": "nest start --config app/assistant.config.app.json --watch",
+    "start:image-generation": "node dist/app/image-generation.app",
+    "start:image-generation:dev": "nest start --config app/image-generation.config.app.json --watch",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "test": "jest",

@@ -1,5 +1,5 @@
-import { MessagesClient } from '@playground/assistant/infrastructure/open-ai/messages.client';
-import { FileClient } from '@playground/assistant/infrastructure/open-ai/file.client';
+import { MessagesClient } from '@playground/shared/infrastructure/open-ai/messages.client';
+import { FileClient } from '@playground/shared/infrastructure/open-ai/file.client';
 
 export class GetThreadMessagesService {
   constructor(
