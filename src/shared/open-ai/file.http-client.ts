@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { FileClient } from '@playground/shared/infrastructure/open-ai/file.client';
+import { FileClient } from '@playground/shared/open-ai/file.client';
 import * as fs from 'fs';
 
 export class FileHttpClient implements FileClient {
@@ -12,7 +12,7 @@ export class FileHttpClient implements FileClient {
         return null;
       }
 
-      const outputFileName = `./files/${fileId}.png`;
+      const outputFileName = `./files/${fileId}.zip`;
 
       const arrayBuffer = await file.arrayBuffer();
       const buffer = Buffer.from(arrayBuffer);

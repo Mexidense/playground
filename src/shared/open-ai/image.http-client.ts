@@ -1,4 +1,4 @@
-import { ImageClient } from '@playground/shared/infrastructure/open-ai/image.client';
+import { ImageClient } from '@playground/shared/open-ai/image.client';
 import OpenAI from 'openai';
 import * as fs from 'fs';
 

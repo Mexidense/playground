@@ -1,4 +1,4 @@
-import { ImageClient } from '@playground/shared/infrastructure/open-ai/image.client';
+import { ImageClient } from '@playground/shared/open-ai/image.client';
 
 export class ImageGenerationFromScratchService {
   constructor(private readonly imageGenerationClient: ImageClient) {}

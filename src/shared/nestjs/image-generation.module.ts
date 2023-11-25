@@ -1,10 +1,10 @@
 import { Module, OnApplicationBootstrap } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import OpenAI from 'openai';
-import { ImageGenerationFromScratchService } from '@playground/image-generation/application/image-generation-from-scratch.service';
-import { ImageClient } from '@playground/shared/infrastructure/open-ai/image.client';
-import { ImageHttpClient } from '@playground/shared/infrastructure/open-ai/image.http-client';
-import { ImageGenerationFromImageService } from '@playground/image-generation/application/image-generation-from-image.service';
+import { ImageGenerationFromScratchService } from '@playground/image-generation/image-generation-from-scratch.service';
+import { ImageClient } from '@playground/shared/open-ai/image.client';
+import { ImageHttpClient } from '@playground/shared/open-ai/image.http-client';
+import { ImageGenerationFromImageService } from '@playground/image-generation/image-generation-from-image.service';
 
 @Module({
   imports: [ConfigModule.forRoot()],
