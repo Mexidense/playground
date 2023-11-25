@@ -2,13 +2,13 @@ import { Module, OnApplicationBootstrap } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import OpenAI from 'openai';
 import { RunThreadService } from '@playground/assistant/application/service/run-thread.service';
-import { ThreadClient } from '@playground/assistant/infrastructure/open-ai/thread.client';
+import { ThreadClient } from '@playground/shared/infrastructure/open-ai/thread.client';
 import { GetThreadMessagesService } from '@playground/assistant/application/service/get-thread-messages.service';
-import { MessagesClient } from '@playground/assistant/infrastructure/open-ai/messages.client';
-import { FileClient } from '@playground/assistant/infrastructure/open-ai/file.client';
-import { ThreadHttpClient } from '@playground/assistant/infrastructure/open-ai/thread.http-client';
-import { MessagesHttpClient } from '@playground/assistant/infrastructure/open-ai/messages.http-client';
-import { FileHttpClient } from '@playground/assistant/infrastructure/open-ai/file.http-client';
+import { MessagesClient } from '@playground/shared/infrastructure/open-ai/messages.client';
+import { FileClient } from '@playground/shared/infrastructure/open-ai/file.client';
+import { ThreadHttpClient } from '@playground/shared/infrastructure/open-ai/thread.http-client';
+import { MessagesHttpClient } from '@playground/shared/infrastructure/open-ai/messages.http-client';
+import { FileHttpClient } from '@playground/shared/infrastructure/open-ai/file.http-client';
 
 @Module({
   imports: [ConfigModule.forRoot()],

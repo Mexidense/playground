@@ -1,7 +1,7 @@
 import {
   MessagesClient,
   ThreadMessageResponse,
-} from '@playground/assistant/infrastructure/open-ai/messages.client';
+} from '@playground/shared/infrastructure/open-ai/messages.client';
 import OpenAI from 'openai';
 
 export class MessagesHttpClient implements MessagesClient {

@@ -19,6 +19,8 @@
     "baseUrl": ".",
     "paths": {
       "@playground/assistant/*": ["src/assistant/*"],
+      "@playground/image-generation/*": ["src/image-generation/*"],
+      "@playground/shared/*": ["src/shared/*"],
     }
   }
 }
