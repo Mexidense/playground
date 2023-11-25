@@ -1,7 +1,7 @@
 import {
   RunResponseType,
   ThreadClient,
-} from '@playground/shared/infrastructure/open-ai/thread.client';
+} from '@playground/shared/open-ai/thread.client';
 import OpenAI from 'openai';
 import { ThreadCreateAndRunParams } from 'openai/resources/beta';
 import Message = ThreadCreateAndRunParams.Thread.Message;

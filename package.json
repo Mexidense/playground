@@ -11,6 +11,8 @@
     "start:assistant:dev": "nest start --config app/assistant.config.app.json --watch",
     "start:image-generation": "node dist/app/image-generation.app",
     "start:image-generation:dev": "nest start --config app/image-generation.config.app.json --watch",
+    "start:sequence-diagram": "node dist/app/sequence-diagram.app",
+    "start:sequence-diagram:dev": "nest start --config app/sequence-diagram.config.app.json --watch",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "test": "jest",

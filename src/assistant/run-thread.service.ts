@@ -1,4 +1,4 @@
-import { ThreadClient } from '@playground/shared/infrastructure/open-ai/thread.client';
+import { ThreadClient } from '@playground/shared/open-ai/thread.client';
 
 export class RunThreadService {
   constructor(private readonly threadClient: ThreadClient) {}
