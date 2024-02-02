@@ -30,7 +30,9 @@ import { VisionHttpClient } from '@playground/shared/open-ai/vision.http-client'
     },
   ],
 })
-export class SequenceDiagramModule implements OnApplicationBootstrap {
+export class SequenceDiagramGenerateCodeModule
+  implements OnApplicationBootstrap
+{
   constructor(private sequenceDiagramService: GenerateCodeService) {}
 
   async onApplicationBootstrap(): Promise<void> {
