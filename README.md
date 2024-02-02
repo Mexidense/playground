@@ -32,3 +32,14 @@
     ```bash
     npm run sequence-diagram:generate-code
     ```
+
+## Generate documentation from UML sequence diagrams with Open AI
+
+- Dev environment run
+    ```bash
+    npm run sequence-diagram:generate-documentation:dev
+    ```
+- Prod environment run
+    ```bash
+    npm run sequence-diagram:generate-documentation
+    ```
