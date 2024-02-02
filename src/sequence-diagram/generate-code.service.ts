@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import { VisionClient } from '@playground/shared/open-ai/vision.client';
 
-export class SequenceDiagramService {
+export class GenerateCodeService {
   constructor(private readonly visionClient: VisionClient) {}
 
   async generateCode(

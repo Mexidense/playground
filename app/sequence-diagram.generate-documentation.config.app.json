@@ -1,7 +1,7 @@
 {
   "collection": "@nestjs/schematics",
   "sourceRoot": "app",
-  "entryFile": "sequence-diagram.app",
+  "entryFile": "sequence-diagram.generate-documentation.app",
   "compilerOptions": {
     "watchAssets": true
   }
