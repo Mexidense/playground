@@ -1,7 +1,7 @@
 import { Module, OnApplicationBootstrap } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import OpenAI from 'openai';
-import { SequenceDiagramService } from '@playground/sequence-diagram/sequence-diagram.service';
+import { GenerateCodeService } from '@playground/sequence-diagram/generate-code.service';
 import { VisionClient } from '@playground/shared/open-ai/vision.client';
 import { VisionHttpClient } from '@playground/shared/open-ai/vision.http-client';
 
@@ -23,15 +23,15 @@ import { VisionHttpClient } from '@playground/shared/open-ai/vision.http-client'
       inject: [OpenAI],
     },
     {
-      provide: SequenceDiagramService,
+      provide: GenerateCodeService,
       useFactory: (visionClient: VisionClient) =>
-        new SequenceDiagramService(visionClient),
+        new GenerateCodeService(visionClient),
       inject: [VisionHttpClient],
     },
   ],
 })
 export class SequenceDiagramModule implements OnApplicationBootstrap {
-  constructor(private sequenceDiagramService: SequenceDiagramService) {}
+  constructor(private sequenceDiagramService: GenerateCodeService) {}
 
   async onApplicationBootstrap(): Promise<void> {
     const programmingLanguage = 'typescript';
